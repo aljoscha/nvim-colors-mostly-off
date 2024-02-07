@@ -90,7 +90,7 @@ function M.setup()
     Title = { fg = c.fg_title, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = c.bg_visual }, -- Visual mode selection
     VisualNOS = { bg = c.bg_subtle }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = c.diagnostic.warning }, -- warning messages
+    WarningMsg = { fg = c.diagnostic.error_subtle }, -- warning messages
     Whitespace = { fg = c.fg_whitespace }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
     WinBar = { link = "StatusLine" }, -- window bar
