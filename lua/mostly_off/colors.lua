@@ -13,6 +13,7 @@ local function load_palettes()
   local medium_gray     = "#767676"
   local light_gray      = "#B2B2B2"
   local lighter_gray    = "#EEEEEE"
+  local lightest_gray   = "#f9f9f9"
   local darker_red      = "#542328"
   local dark_red        = "#c03545"
   local red             = "#ff2222"
@@ -41,6 +42,7 @@ local function load_palettes()
     bg              = black,
     bg_subtle       = light_black,
     bg_very_subtle  = subtle_black,
+    bg_extra_subtle = light_black,
     norm            = dark_norm,
     norm_subtle     = light_gray,
 
@@ -50,6 +52,7 @@ local function load_palettes()
     blue            = light_blue,
     orange          = orange,
     medium_gray     = medium_gray,
+    subtle_gray     = lighter_gray,
 
     visual          = lighter_black,
     highlight       = medium_gray,
@@ -75,6 +78,7 @@ local function load_palettes()
     bg              = actual_white,
     bg_subtle       = light_gray,
     bg_very_subtle  = lighter_gray,
+    bg_extra_subtle = lightest_gray,
     norm            = black,
     norm_subtle     = lighter_black,
 
@@ -84,6 +88,7 @@ local function load_palettes()
     blue            = dark_blue,
     orange          = orange,
     medium_gray     = medium_gray,
+    subtle_gray     = lighter_gray,
 
     visual          = light_blue,
     highlight       = blue,
@@ -91,7 +96,7 @@ local function load_palettes()
     directory       = dark_blue,
 
     diff_info_fg    = dark_blue,
-    diff_info_bg   = light_blue,
+    diff_info_bg    = light_blue,
 
     diff_add_fg     = dark_green,
     diff_add_bg     = light_green,
@@ -137,7 +142,7 @@ function M.setup(opts)
     todo = colors.red_subtle,
     warning = colors.orange,
     info = colors.blue,
-    hint = colors.medium_gray,
+    hint = colors.subtle_gray,
     ok = colors.green,
   }
 
@@ -151,24 +156,17 @@ function M.setup(opts)
   colors.fg_statusline = colors.norm
 
   -- Sidebar and Floats are configurable
-  colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-    or config.options.styles.sidebars == "dark" and colors.bg_subtle
-    or colors.bg
+  colors.fg_sidebar = colors.norm
+  colors.bg_sidebar = colors.bg_extra_subtle
 
-  colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.bg_subtle
-    or colors.bg_subtle
-
-  colors.bg_float_subtle = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.bg_very_subtle
-    or colors.bg_very_subtle
+  colors.fg_float = colors.norm
+  colors.bg_float = colors.bg_subtle
+  colors.bg_float_subtle = colors.bg_extra_subtle
 
   colors.bg_visual = colors.visual
   colors.bg_search = colors.bg_subtle
   colors.bg_inc_search = colors.search
   colors.fg_inc_search = colors.norm_subtle
-  colors.fg_sidebar = colors.norm
-  colors.fg_float = colors.norm
   colors.fg_gutter = colors.bg_subtle
   colors.fg_whitespace = colors.medium_gray
   colors.fg_gutter_cursor = colors.highlight
