@@ -140,7 +140,7 @@ function M.setup(opts)
     todo = colors.red_subtle,
     warning = colors.orange,
     info = colors.blue,
-    hint = colors.subtle_gray,
+    hint = colors.medium_gray,
     ok = colors.green,
   }
 
