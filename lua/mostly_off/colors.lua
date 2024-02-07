@@ -160,8 +160,7 @@ function M.setup(opts)
   colors.bg_sidebar = colors.bg_extra_subtle
 
   colors.fg_float = colors.norm
-  colors.bg_float = colors.bg_subtle
-  colors.bg_float_subtle = colors.bg_extra_subtle
+  colors.bg_float = colors.bg_extra_subtle
 
   colors.bg_visual = colors.visual
   colors.bg_search = colors.bg_subtle
