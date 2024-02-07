@@ -126,8 +126,6 @@ function M.setup(opts)
   ---@class ColorScheme: Palette
   local colors = vim.tbl_deep_extend("force", vim.deepcopy(M.palettes.common), palette)
 
-  util.bg = colors.bg
-
   -- TODO
   colors.diff = {
     add = colors.diff_add_bg,
