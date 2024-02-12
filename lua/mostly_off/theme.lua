@@ -311,7 +311,7 @@ function M.setup()
     -- --- Text
     -- -- ["@markup.raw.markdown"] = { fg = c.blue },
     -- ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.blue },
-    -- ["@markup.link"] = { fg = c.teal },
+    ["@markup.link"] = { link = "Underlined" },
     --
     -- ["@markup.list.unchecked"] = { fg = c.blue }, -- For brackets and parens.
     -- ["@markup.list.checked"] = { fg = c.green1 }, -- For brackets and parens.
