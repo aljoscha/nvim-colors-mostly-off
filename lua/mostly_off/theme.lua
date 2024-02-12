@@ -137,6 +137,8 @@ function M.setup()
     -- Delimiter = { link = "Special" }, --  character that needs attention
     -- -- SpecialComment= { }, -- special things inside a comment
     -- Debug = { fg = c.orange }, --    debugging statements
+    ["@string.special.vimdoc"] = { fg = c.fg_special_key },
+
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
     -- Bold = { bold = true },
