@@ -2,7 +2,7 @@ local M = {}
 
 ---@class Config
 local defaults = {
-  style = "light",
+  dark_style = "dark", -- The theme is used when the background is set to dark
   light_style = "light", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -18,8 +18,6 @@ local defaults = {
     floats = "dark", -- style for floating windows
   },
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-
-  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 }
 
 ---@type Config
@@ -36,7 +34,7 @@ function M.extend(options)
 end
 
 function M.is_light()
-  return M.options.style == "light" or M.options.use_background and vim.o.background == "light"
+  return vim.o.background == "light"
 end
 
 M.setup()

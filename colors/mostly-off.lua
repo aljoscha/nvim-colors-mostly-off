@@ -1,1 +1,1 @@
-require("mostly_off")._load()
+require("mostly_off").load()

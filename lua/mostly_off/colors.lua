@@ -119,7 +119,7 @@ function M.setup(opts)
   opts = opts or {}
   local config = require("mostly_off.config")
 
-  local style = config.is_light() and config.options.light_style or config.options.style
+  local style = config.is_light() and config.options.light_style or config.options.dark_style
   local palette = M.palettes[style] or {}
 
   -- Color Palette
