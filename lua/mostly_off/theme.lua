@@ -103,14 +103,14 @@ function M.setup()
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant = { fg = c.norm_subtle }, -- (preferred) any constant
-    -- String = { fg = c.green }, --   a string constant: "this is a string"
+    String = { fg = c.norm_subtle }, --   a string constant: "this is a string"
     -- Character = { fg = c.green }, --  a character constant: 'c', '\n'
     -- -- Number        = { }, --   a number constant: 234, 0xff
     -- -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- -- Float         = { }, --    a floating point constant: 2.3e10
 
     Identifier = { fg = c.norm, style = options.styles.variables }, -- (preferred) any variable name
-    -- Function = { fg = c.blue, style = options.styles.functions }, -- function name (also: methods for classes)
+    Function = { fg = c.norm, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.norm }, -- (preferred) any statement
     -- -- Conditional   = { }, --  if, then, else, endif, switch, etc.
@@ -138,7 +138,6 @@ function M.setup()
     -- -- SpecialComment= { }, -- special things inside a comment
     -- Debug = { fg = c.orange }, --    debugging statements
     ["@string.special.vimdoc"] = { fg = c.fg_special_key },
-
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
     -- Bold = { bold = true },
