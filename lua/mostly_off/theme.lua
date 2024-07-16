@@ -458,12 +458,14 @@ function M.setup()
     -- GitGutterAddLineNr = { fg = c.gitSigns.add },
     -- GitGutterChangeLineNr = { fg = c.gitSigns.change },
     -- GitGutterDeleteLineNr = { fg = c.gitSigns.delete },
-    --
-    -- -- GitSigns
-    -- GitSignsAdd = { fg = c.gitSigns.add }, -- diff mode: Added line |diff.txt|
-    -- GitSignsChange = { fg = c.gitSigns.change }, -- diff mode: Changed line |diff.txt|
-    -- GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
-    --
+
+    -- GitSigns
+    GitSignsAdd = { link = "GitGutterAdd" }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { link = "GitGutterChange" }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { link = "GitGutterDelete" }, -- diff mode: Deleted line |diff.txt|
+    GitSignsTopdelete = { link = "GitGutterDelete" }, -- diff mode: Deleted line |diff.txt|
+    GitSignsChangedelete = { link = "GitGutterDelete" }, -- diff mode: Deleted line |diff.txt|
+
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight, bg = c.bg_float },
     TelescopeNormal = { fg = c.norm, bg = c.bg_float },
